@@ -23,7 +23,7 @@ class Body extends StatelessWidget {
           children: [
             FlatButton(
               padding: EdgeInsets.all(7),
-              onPressed: () => print('click!'),
+              onPressed: () => Navigator.pushNamed(context, '/Management'),
               child: Column(
                 children: <Widget>[
                   Image.asset(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wmsmobile/screens/main_menu/components/body.dart';
-import 'package:wmsmobile/screens/main_menu/components/footer_bar.dart';
-import 'package:wmsmobile/screens/main_menu/components/header_bar.dart';
+import 'package:wmsmobile/components/footer_bar/footer_bar.dart';
+import 'package:wmsmobile/components/header_bar/header_bar.dart';
 
 class MainMenu extends StatefulWidget {
   @override

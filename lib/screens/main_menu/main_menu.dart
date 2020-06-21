@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wmsmobile/screens/main_menu/components/body.dart';
+import 'package:wmsmobile/screens/main_menu/components/footer_bar.dart';
+import 'package:wmsmobile/screens/main_menu/components/header_bar.dart';
 
 class MainMenu extends StatefulWidget {
   @override
@@ -23,39 +25,11 @@ class _MainMenuState extends State<MainMenu> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'WMSImage',
-          style: Theme.of(context).textTheme.headline1,
-        ),
-      ),
+    var scaffold = Scaffold(
+      appBar: HeaderBar(),
       body: Body(),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            title: Text('Search'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_box),
-            title: Text('Add'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            title: Text('Message'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('User'),
-          ),
-        ],
-      ),
+      bottomNavigationBar: FooterBar(),
     );
+    return scaffold;
   }
 }

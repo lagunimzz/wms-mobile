@@ -57,6 +57,24 @@ class Body extends StatelessWidget {
                 ],
               ),
             ),
+            FlatButton(
+              padding: EdgeInsets.all(7),
+              onPressed: () => print('click!'),
+              child: Column(
+                children: <Widget>[
+                  Image.asset(
+                    'images/warehouse_icon.png',
+                  ),
+                  Text(
+                    'จัดการ Zone',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

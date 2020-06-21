@@ -6,6 +6,7 @@ class Body extends StatelessWidget {
     return Column(
       children: <Widget>[
         Container(
+          alignment: Alignment.center,
           color: Theme.of(context).accentColor,
           child: Padding(
             padding: EdgeInsets.symmetric(

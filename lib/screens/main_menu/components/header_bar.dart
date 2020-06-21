@@ -12,5 +12,5 @@ class HeaderBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize => new Size.fromHeight(50);
 }

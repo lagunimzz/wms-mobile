@@ -25,11 +25,12 @@ class _MainMenuState extends State<MainMenu> {
 
   @override
   Widget build(BuildContext context) {
-    var scaffold = Scaffold(
-      appBar: HeaderBar(),
-      body: Body(),
-      bottomNavigationBar: FooterBar(),
+    return SafeArea(
+      child: Scaffold(
+        appBar: HeaderBar(),
+        body: Body(),
+        bottomNavigationBar: FooterBar(),
+      ),
     );
-    return scaffold;
   }
 }

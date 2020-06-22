@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wmsmobile/components/header_bar/header_bar.dart';
+import 'package:wmsmobile/components/footer_bar/footer_bar.dart';
+import 'package:wmsmobile/screens/zone_management/components/BodyMain.dart';
 
 class ZoneMain extends StatefulWidget {
   @override
@@ -7,11 +9,13 @@ class ZoneMain extends StatefulWidget {
 }
 
 class _ZoneMainState extends State<ZoneMain> {
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: HeaderBar(),
-
+      body: BodyMain(),
+      bottomNavigationBar: FooterBar(),
     );
   }
 }

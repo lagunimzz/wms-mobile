@@ -23,6 +23,7 @@ class _ProductTypeAddState extends State<ProductTypeAdd> {
         body: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
             child: Form(
               key: _formKey,
               child: Column(
@@ -37,8 +38,8 @@ class _ProductTypeAddState extends State<ProductTypeAdd> {
     return TextFormField(
       controller: _addItem,
       decoration: const InputDecoration(
-        hintText: 'ชื่อประเภทสินค้า',
-      ),
+          hintText: 'ชื่อประเภทสินค้า',
+          hintStyle: TextStyle(color: Colors.grey)),
       validator: (value) {
         if (value.isEmpty) {
           return 'กรุณาระบุชื่อประเภทสินค้า';

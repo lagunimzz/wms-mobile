@@ -45,17 +45,37 @@ class _ProductTypeState extends State<ProductType> {
   }
 
   Widget _buildRow(productType, productTypesImage) {
-    return ListTile(
-      leading: SizedBox(
-          height: 100.0,
-          width: 100.0, // fixed width and height
-          child: Image.network(
+    return Container(
+      padding: EdgeInsets.all(10),
+      margin: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: BorderRadius.circular(5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 1,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+      child: Row(
+        children: <Widget>[
+          Image.network(
             productTypesImage,
+            width: 80,
+            height: 80,
             fit: BoxFit.fill,
-          )),
-      title: Text(
-        productType,
-        style: _biggerFont,
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              productType,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+            ),
+          )
+        ],
       ),
     );
   }

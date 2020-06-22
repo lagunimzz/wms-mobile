@@ -20,59 +20,41 @@ class _ZoneCardState extends State<ZoneCard> {
 //        margin: EdgeInsets.all(9),
 //        padding: EdgeInsets.all(6),
         child: new Row(
-          mainAxisSize: MainAxisSize.min,
+//          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-              new Column(
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    width: 120,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('images/wms_main_image.png'),
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                    )
-                  )
-                ],
-              ),
-              new Column(
-                children: <Widget>[
-                  new Column(
-                    children: <Widget>[
-                      Text(
-                          widget.cardObject.zone,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w900
-                        ),
-                      ),
-                      Text(
-                        widget.cardObject.zone,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w300
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-              new Column(
-                children: <Widget>[
-
-                ],
-              ),
-//            GFImageOverlay(
-//                height: 50,
-//                width: 50,
-//                shape: BoxShape.rectangle,
-//                image:AssetImage('images/wms_main_image.png')
-//            ),
-//            new Padding(padding: EdgeInsets.all(8)),
-//            new Text(widget.cardObject.zone)
+            Container(
+                margin: EdgeInsets.all(5),
+                width: 120,
+                height: 80,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('images/wms_main_image.png'),
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                )
+            ),
+            SizedBox(width: 5),
+            new Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  widget.cardObject.zone,
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                Text(
+                  widget.cardObject.zoneDescription,
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w300
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

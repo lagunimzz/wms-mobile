@@ -10,15 +10,15 @@ class BodyMain extends StatefulWidget {
 class _BodyMainState extends State<BodyMain> {
 
     List<CardObject> zoneList = [
-      CardObject(zone: "Zone : 1"),
-      CardObject(zone: "Zone : 2"),
-      CardObject(zone: "Zone : 3"),
-      CardObject(zone: "Zone : 4"),
-      CardObject(zone: "Zone : 5"),
-      CardObject(zone: "Zone : 6"),
-      CardObject(zone: "Zone : 7"),
-      CardObject(zone: "Zone : 8"),
-      CardObject(zone: "Zone : 9"),
+      CardObject(zone: "Zone : 1",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 2",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 3",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 4",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 5",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 6",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 7",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 8",zoneDescription: "เครื่องสำอาง"),
+      CardObject(zone: "Zone : 9",zoneDescription: "เครื่องสำอาง"),
     ];
 
 //  final List<Object> zoneList = List<Object>.generate(5, (index) => CardObject(

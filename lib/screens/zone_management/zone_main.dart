@@ -16,6 +16,11 @@ class _ZoneMainState extends State<ZoneMain> {
       appBar: HeaderBar(),
       body: BodyMain(),
       bottomNavigationBar: FooterBar(),
+      floatingActionButton: new FloatingActionButton(
+        onPressed: null,
+        child: new Icon(Icons.add),
+        backgroundColor: Colors.indigoAccent,
+      ),
     );
   }
 }

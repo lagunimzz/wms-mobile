@@ -16,11 +16,9 @@ class _ZoneCardState extends State<ZoneCard> {
   @override
   Widget build(BuildContext context) {
     return new Card(
-      child: new Container(
-//        margin: EdgeInsets.all(9),
-//        padding: EdgeInsets.all(6),
-        child: new Row(
-//          mainAxisSize: MainAxisSize.min,
+      elevation: 5,
+      child: Container(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
@@ -36,7 +34,7 @@ class _ZoneCardState extends State<ZoneCard> {
                 )
             ),
             SizedBox(width: 5),
-            new Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
@@ -49,7 +47,7 @@ class _ZoneCardState extends State<ZoneCard> {
                 Text(
                   widget.cardObject.zoneDescription,
                   style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 20,
                       fontWeight: FontWeight.w300
                   ),
                 )

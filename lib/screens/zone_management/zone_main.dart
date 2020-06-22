@@ -16,11 +16,18 @@ class _ZoneMainState extends State<ZoneMain> {
       appBar: HeaderBar(),
       body: BodyMain(),
       bottomNavigationBar: FooterBar(),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: null,
-        child: new Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushNamed(context, "/ZoneAdd");
+        },
+        child: Icon(Icons.add,size: 40),
+        foregroundColor: Colors.white,
         backgroundColor: Colors.indigoAccent,
+        heroTag: "addZonePage",
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(16.0))),
       ),
     );
   }
+
+
 }

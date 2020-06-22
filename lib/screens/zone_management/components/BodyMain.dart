@@ -36,7 +36,8 @@ class _BodyMainState extends State<BodyMain> {
       padding: EdgeInsets.all(10),
       child: ListView.builder(
         itemCount: zoneList.length,
-          itemBuilder: (BuildContext context, int index) => ZoneCard(cardObject: zoneList[index])
+        itemBuilder: (BuildContext context, int index) => ZoneCard(cardObject: zoneList[index]),
+//        scrollDirection: Axis.horizontal,
       )
     );
   }

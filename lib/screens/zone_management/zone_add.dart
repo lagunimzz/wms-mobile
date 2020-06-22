@@ -34,7 +34,7 @@ class _ZoneAddState extends State<ZoneAdd> {
               foregroundColor: Colors.white,
               backgroundColor: Colors.blueAccent,
               heroTag: "gallery",
-              hoverColor: Colors.amber,
+              hoverColor: Colors.indigo,
               focusColor: Colors.amber,
             )
           ]

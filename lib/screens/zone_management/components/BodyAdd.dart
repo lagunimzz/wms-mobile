@@ -20,52 +20,88 @@ class _BodyAddState extends State<BodyAdd> {
       padding: EdgeInsets.all(10),
       child:
         Padding(
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.all(10),
           child: Form(
             key: formKey,
             child: Column(
-              children: buildInput(),
+//              children: buildInput(),
+              children: <Widget>[
+                TextFormField(
+                  style: TextStyle(fontSize: 18),
+                  decoration: InputDecoration(
+                      labelText: "Zone Name",
+//                      labelStyle: Theme.of(context).textTheme.headline1,
+                      labelStyle: TextStyle(color: Colors.black),
+                      hintText: 'Zone Name',
+                      hintStyle: TextStyle(color: Colors.grey)
+                  ),
+                  onSaved: (value) => _zoneName = value,
+                ),
+                Row(
+                  children: <Widget>[
+                    DropdownButton(
+                      items: _productTypeList.map((value) => DropdownMenuItem(
+                        child: Text(value, style: TextStyle(color: Colors.black)),
+                        value: value,
+                      )).toList(),
+                      onChanged: (value){
+                        setState(() {
+                          _defaultProductType = value;
+                        });
+                      },
+                      value: _defaultProductType,
+                      isExpanded: false,
+                      hint: Text("Choose Product Type", style: TextStyle(color: Colors.black)),
+                    ),
+                    SizedBox(width: 5),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.add),
+                    )
+                  ],
+                )
+              ],
             ),
           ),
         ),
     );
   }
 
-  List<Widget> buildInput(){
-    List<Widget> textFields = [];
-  
-    textFields.add(
-        TextFormField(
-          style: TextStyle(fontSize: 18),
-//          decoration: buildTextStyle("HELLO"),
-          decoration: const InputDecoration(
-            labelText: "Zone Name",
-            hintText: 'Zone Name',
-            hintStyle: TextStyle(color: Colors.grey)
-          ),
-          onSaved: (value) => _zoneName = value,
-        )
-    );
-    textFields.add(SizedBox(height: 20));
-    textFields.add(
-        DropdownButton(
-          items: _productTypeList.map((value) => DropdownMenuItem(
-            child: Text(value, style: TextStyle(color: Colors.black)),
-            value: value,
-          )).toList(),
-          onChanged: (value){
-            setState(() {
-              _defaultProductType = value;
-            });
-          },
-          value: _defaultProductType,
-          isExpanded: true,
-          hint: Text("Product Type", style: TextStyle(color: Colors.black)),
-        )
-    );
-
-    return textFields;
-  }
+//  List<Widget> buildInput(){
+//    List<Widget> textFields = [];
+//
+//    textFields.add(
+//        TextFormField(
+//          style: TextStyle(fontSize: 18),
+////          decoration: buildTextStyle("HELLO"),
+//          decoration: const InputDecoration(
+//            labelText: "Zone Name",
+//            hintText: 'Zone Name',
+//            hintStyle: TextStyle(color: Colors.grey)
+//          ),
+//          onSaved: (value) => _zoneName = value,
+//        )
+//    );
+//    textFields.add(SizedBox(height: 20));
+//    textFields.add(
+//        DropdownButton(
+//          items: _productTypeList.map((value) => DropdownMenuItem(
+//            child: Text(value, style: TextStyle(color: Colors.black)),
+//            value: value,
+//          )).toList(),
+//          onChanged: (value){
+//            setState(() {
+//              _defaultProductType = value;
+//            });
+//          },
+//          value: _defaultProductType,
+//          isExpanded: true,
+//          hint: Text("Product Type", style: TextStyle(color: Colors.black)),
+//        )
+//    );
+//
+//    return textFields;
+//  }
 
 //  InputDecoration buildTextStyle(String hint){
 //    return InputDecoration(

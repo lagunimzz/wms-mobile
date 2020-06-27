@@ -24,7 +24,7 @@ extension HexColor on Color {
 }
 
 void main() {
-  // TEST
+  // TEST TEST
   runApp(MyApp());
 }
 

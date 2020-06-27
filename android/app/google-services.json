@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "497877047698",
+    "firebase_url": "https://osoft-wms.firebaseio.com",
+    "project_id": "osoft-wms",
+    "storage_bucket": "osoft-wms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497877047698:android:c0f94b0e58a69498b8894b",
+        "android_client_info": {
+          "package_name": "com.osoft.wmsmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497877047698-po1raj7r8gd8l5slamr72gnp9cvl5ldi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEhSktpSU1uomBOc1fnISpCcdAK4WarFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497877047698-po1raj7r8gd8l5slamr72gnp9cvl5ldi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
